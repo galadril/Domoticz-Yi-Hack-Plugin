@@ -1,10 +1,11 @@
-# Domoticz-Yi-Hack
-Full version of Yi Hack Plugin for Domoticz home automation
 
+# Domoticz-Yi-Hack
+
+Yi Hack Plugin for Domoticz home automation
 This plugin allows you to set various configuration on Yi Cameras that have one of the next Yi Hacks installed:  
 
-MStar - https://github.com/roleoroleo/yi-hack-MStar/wiki/Web-services-description 
-AllWinner - https://github.com/roleoroleo/yi-hack-Allwinner 
+[MStar](https://github.com/roleoroleo/yi-hack-MStar/wiki/Web-services-description) 
+[AllWinner](https://github.com/roleoroleo/yi-hack-Allwinner) 
 
 
 ## Supported cameras
@@ -36,6 +37,8 @@ See the MStar/AllWinner github pages for a list of all supported camera's
   4. Enable or disable 'save video on motion' mode
   
 * When network connectivity is lost the Domoticz UI will optionally show the device(s) with Red banner
+
+![devices](https://user-images.githubusercontent.com/14561640/87668218-0905ec80-c76c-11ea-9107-ff49395ffb00.png)
 
 
 ## Installation
