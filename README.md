@@ -1,9 +1,10 @@
 # Domoticz-Yi-Hack
 Full version of Yi Hack Plugin for Domoticz home automation
 
-This plugin allows you to set various configuration on Yi Cameras that have one of the next Yi Hacks installed:
-MStar - https://github.com/roleoroleo/yi-hack-MStar/wiki/Web-services-description
-AllWinner - https://github.com/roleoroleo/yi-hack-Allwinner
+This plugin allows you to set various configuration on Yi Cameras that have one of the next Yi Hacks installed:  
+
+MStar - https://github.com/roleoroleo/yi-hack-MStar/wiki/Web-services-description 
+AllWinner - https://github.com/roleoroleo/yi-hack-Allwinner 
 
 
 ## Supported cameras
