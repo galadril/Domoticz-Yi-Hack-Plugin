@@ -66,3 +66,10 @@ To update:
 | Version | Information |
 | ----- | ---------- |
 | 1.0.0 | Initial upload version |
+
+
+# Donation
+
+If you like to say thanks, you could always buy me a cup of coffee (/beer)!   
+(Thanks!)  
+[![PayPal donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/markheinis)
