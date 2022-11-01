@@ -136,55 +136,59 @@ class BasePlugin:
         return True
 
     def onMessage(self, Connection, Data):
-        Response = json.loads(Data["Data"])
-        DumpJSONResponseToLog(Response)
+        try:
+            Response = json.loads(Data["Data"])
+            DumpJSONResponseToLog(Response)
         
-        if ('SWITCH_ON' in Response):
-            if (Response["SWITCH_ON"] == 'yes'):
-                self.cameraState = 1
-            else:
-                self.cameraState = 0
-            UpdateDevice(1, self.cameraState, '', 0)
-            
-        if ('LED' in Response):
-            if (Response["LED"] == 'yes'):
-                self.ledState = 1
-            else:
-                self.ledState = 0
-            UpdateDevice(2, self.ledState, '', 0)
-            
-        if ('LED' in Response):
-            if (Response["LED"] == 'yes'):
-                self.irState = 1
-            else:
-                self.irState = 0
-            UpdateDevice(3, self.irState, '', 0)
-            
-        if ('ROTATE' in Response):
-            if (Response["ROTATE"] == 'yes'):
-                self.rotateState = 1
-            else:
-                self.rotateState = 0
-            UpdateDevice(4, self.rotateState, '', 0)
-            
-        if ('SAVE_VIDEO_ON_MOTION' in Response):
-            if (Response["SAVE_VIDEO_ON_MOTION"] == 'yes'):
-                self.motionState = 1
-            else:
-                self.motionState = 0
-            UpdateDevice(5, self.motionState, '', 0)
-            
-        if ('SENSITIVITY' in Response): 
-            if (Response["SENSITIVITY"] == 'low'):
-                self.sensitivityState = 10
-                UpdateDevice(6, self.sensitivityState, 'Low', 0)
-            elif (Response["SENSITIVITY"] == 'medium'):
-                self.sensitivityState = 20
-                UpdateDevice(6, self.sensitivityState, 'Medium', 0)
-            else:
-                self.sensitivityState = 30
-                UpdateDevice(6, self.sensitivityState, 'High', 0)
+            if ('SWITCH_ON' in Response):
+                if (Response["SWITCH_ON"] == 'yes'):
+                    self.cameraState = 1
+                else:
+                    self.cameraState = 0
+                UpdateDevice(1, self.cameraState, '', 0)
                 
+            if ('LED' in Response):
+                if (Response["LED"] == 'yes'):
+                    self.ledState = 1
+                else:
+                    self.ledState = 0
+                UpdateDevice(2, self.ledState, '', 0)
+                
+            if ('LED' in Response):
+                if (Response["LED"] == 'yes'):
+                    self.irState = 1
+                else:
+                    self.irState = 0
+                UpdateDevice(3, self.irState, '', 0)
+            
+            if ('ROTATE' in Response):
+                if (Response["ROTATE"] == 'yes'):
+                    self.rotateState = 1
+                else:
+                    self.rotateState = 0
+                UpdateDevice(4, self.rotateState, '', 0)
+                
+            if ('SAVE_VIDEO_ON_MOTION' in Response):
+                if (Response["SAVE_VIDEO_ON_MOTION"] == 'yes'):
+                    self.motionState = 1
+                else:
+                    self.motionState = 0
+                UpdateDevice(5, self.motionState, '', 0)
+                
+            if ('SENSITIVITY' in Response): 
+                if (Response["SENSITIVITY"] == 'low'):
+                    self.sensitivityState = 10
+                    UpdateDevice(6, self.sensitivityState, 'Low', 0)
+                elif (Response["SENSITIVITY"] == 'medium'):
+                    self.sensitivityState = 20
+                    UpdateDevice(6, self.sensitivityState, 'Medium', 0)
+                else:
+                    self.sensitivityState = 30
+                    UpdateDevice(6, self.sensitivityState, 'High', 0)
+                
+        except: 
+            Domoticz.Log("No json payload received.")
+            
         return True
 
     def onCommand(self, Unit, Command, Level, Hue):
