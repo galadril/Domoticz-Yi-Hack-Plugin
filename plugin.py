@@ -3,7 +3,7 @@
 #           Author:     galadril, 2020
 #
 """
-<plugin key="YiHack" name="Yi Hack" author="galadril" version="0.0.1" wikilink="https://github.com/galadril/Domoticz-Yi-Hack-Plugin" externallink="">
+<plugin key="YiHack" name="Yi Hack" author="galadril" version="0.0.2" wikilink="https://github.com/galadril/Domoticz-Yi-Hack-Plugin" externallink="">
     <description>
         <h2>Yi Hack Plugin</h2><br/>
         <h3>Features</h3>
