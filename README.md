@@ -65,7 +65,8 @@ To update:
 
 | Version | Information |
 | ----- | ---------- |
-| 1.0.0 | Initial upload version |
+| 0.0.1 | Initial upload version |
+| 0.0.2 | Fixed issue with empty payloads |
 
 
 # Donation
