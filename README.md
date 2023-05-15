@@ -30,13 +30,17 @@ See the MStar/AllWinner github pages for a list of all supported camera's
 
 ## Key Features
 
-* Creates four Domoticz devices per camera
+* Creates multiple Domoticz devices per camera
   1. Turn the camera on or off
-  2. Selector switch for the sensitivity mode: Low/Medium/High
-  3. Set the led/ir led on or off
-  4. Enable or disable 'save video on motion' mode
+  2. Turn the camera led on or off 
+  3. Turn the camera IR led on or off 
+  4. Selector switch for the sensitivity mode: Low/Medium/High
+  5. Set the led/ir led on or off
+  6. Enable or disable 'save video on motion' mode
   
 * When network connectivity is lost the Domoticz UI will optionally show the device(s) with Red banner
+
+For example:
 
 ![devices](https://user-images.githubusercontent.com/14561640/87668218-0905ec80-c76c-11ea-9107-ff49395ffb00.png)
 
