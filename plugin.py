@@ -137,9 +137,12 @@ class BasePlugin:
 
     def onMessage(self, Connection, Data):
         try:
-            Response = json.loads(Data["Data"])
+            Response = json.loads(Data)
             DumpJSONResponseToLog(Response)
-        
+            
+            if ('Data' in Response):
+                Response = Response["Data"]
+            
             if ('SWITCH_ON' in Response):
                 if (Response["SWITCH_ON"] == 'yes'):
                     self.cameraState = 1
@@ -154,8 +157,8 @@ class BasePlugin:
                     self.ledState = 0
                 UpdateDevice(2, self.ledState, '', 0)
                 
-            if ('LED' in Response):
-                if (Response["LED"] == 'yes'):
+            if ('IR' in Response):
+                if (Response["IR"] == 'yes'):
                     self.irState = 1
                 else:
                     self.irState = 0
