@@ -8,7 +8,7 @@
         <h2>Yi Hack Plugin</h2><br/>
         <h3>Features</h3>
         <ul style="list-style-type:square">
-            <li>Enable and disable Yi cameras that have the Yi Hack installed (MStar or AllWinner)</li>
+            <li>Enable and disable Yi cameras that have the Yi Hack installed (MStar, AllWinner or AllWinner v2)</li>
         </ul>
         <h3>Devices</h3>
         <ul style="list-style-type:square">
