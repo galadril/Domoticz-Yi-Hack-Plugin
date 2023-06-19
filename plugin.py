@@ -148,46 +148,46 @@ class BasePlugin:
                     self.cameraState = 1
                 else:
                     self.cameraState = 0
-                UpdateDevice(1, self.cameraState, '', 0)
+                UpdateDevice(1, self.cameraState, '', 1)
                 
             if ('LED' in Response):
                 if (Response["LED"] == 'yes'):
                     self.ledState = 1
                 else:
                     self.ledState = 0
-                UpdateDevice(2, self.ledState, '', 0)
+                UpdateDevice(2, self.ledState, '', 1)
                 
             if ('IR' in Response):
                 if (Response["IR"] == 'yes'):
                     self.irState = 1
                 else:
                     self.irState = 0
-                UpdateDevice(3, self.irState, '', 0)
+                UpdateDevice(3, self.irState, '', 1)
             
             if ('ROTATE' in Response):
                 if (Response["ROTATE"] == 'yes'):
                     self.rotateState = 1
                 else:
                     self.rotateState = 0
-                UpdateDevice(4, self.rotateState, '', 0)
+                UpdateDevice(4, self.rotateState, '', 1)
                 
             if ('SAVE_VIDEO_ON_MOTION' in Response):
                 if (Response["SAVE_VIDEO_ON_MOTION"] == 'yes'):
                     self.motionState = 1
                 else:
                     self.motionState = 0
-                UpdateDevice(5, self.motionState, '', 0)
+                UpdateDevice(5, self.motionState, '', 1)
                 
             if ('SENSITIVITY' in Response): 
                 if (Response["SENSITIVITY"] == 'low'):
                     self.sensitivityState = 10
-                    UpdateDevice(6, self.sensitivityState, 'Low', 0)
+                    UpdateDevice(6, self.sensitivityState, 'Low', 1)
                 elif (Response["SENSITIVITY"] == 'medium'):
                     self.sensitivityState = 20
-                    UpdateDevice(6, self.sensitivityState, 'Medium', 0)
+                    UpdateDevice(6, self.sensitivityState, 'Medium', 1)
                 else:
                     self.sensitivityState = 30
-                    UpdateDevice(6, self.sensitivityState, 'High', 0)
+                    UpdateDevice(6, self.sensitivityState, 'High', 1)
                 
         except: 
             Domoticz.Log("No json payload received.")
