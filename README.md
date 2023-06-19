@@ -6,26 +6,11 @@ This plugin allows you to set various configuration on Yi Cameras that have one 
 
 [MStar](https://github.com/roleoroleo/yi-hack-MStar/wiki/Web-services-description) 
 [AllWinner](https://github.com/roleoroleo/yi-hack-Allwinner) 
-
+[AllWinner V2](https://github.com/roleoroleo/yi-hack-Allwinner-v2)
 
 ## Supported cameras
 
-See the MStar/AllWinner github pages for a list of all supported camera's 
-
-| Camera | Yi Hack |
-| --- | --- |
-| **Yi 1080p Home 9FUS** | AllWinner |
-| **Yi 1080p Home BFUS** | AllWinner |
-| **Yi 1080p Home 4FUS** | MStar |
-| **Yi 1080p Home 6FUS** | MStar |
-| **Yi 1080p Home 9FUS** | MStar |
-| **Yi 1080p Home BFUS** | MStar |
-| **Yi 1080p Dome 6FUS** | MStar |
-| **Yi 1080p Dome BFUS** | MStar |
-| **Yi 1080p Home 4FUS** | MStar |
-| **Yi 1080p Home 9FUS** | MStar |
-| **Yi 1080p Home 6FUS** | MStar |
-| **Yi 1080p Home 6FCN** | MStar |
+See the MStar/AllWinner/AllWinnerV2 github pages for a list of all supported camera's 
 
 
 ## Key Features
@@ -71,6 +56,7 @@ To update:
 | ----- | ---------- |
 | 0.0.1 | Initial upload version |
 | 0.0.2 | Fixed issue with empty payloads |
+| 0.0.3 | Did some changes for AllWinner v2 |
 
 
 # Donation
