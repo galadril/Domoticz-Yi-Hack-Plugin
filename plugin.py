@@ -3,12 +3,12 @@
 #           Author:     galadril, 2020
 #
 """
-<plugin key="YiHack" name="Yi Hack" author="galadril" version="0.0.2" wikilink="https://github.com/galadril/Domoticz-Yi-Hack-Plugin" externallink="">
+<plugin key="YiHack" name="Yi Hack" author="galadril" version="0.0.3" wikilink="https://github.com/galadril/Domoticz-Yi-Hack-Plugin" externallink="">
     <description>
         <h2>Yi Hack Plugin</h2><br/>
         <h3>Features</h3>
         <ul style="list-style-type:square">
-            <li>Enable and disable Yi cameras that have the Yi Hack installed (MStar or AllWinner)</li>
+            <li>Enable and disable Yi cameras that have the Yi Hack installed (MStar, AllWinner or AllWinner v2)</li>
         </ul>
         <h3>Devices</h3>
         <ul style="list-style-type:square">
@@ -117,7 +117,7 @@ class BasePlugin:
         self.YiConn.Connect()
         
         for Device in Devices:
-            UpdateDevice(Device, Devices[Device].nValue, Devices[Device].sValue, 1)
+            UpdateDevice(Device, Devices[Device].nValue, Devices[Device].sValue, 0)
             
         Domoticz.Heartbeat(10)
         return True
@@ -137,9 +137,12 @@ class BasePlugin:
 
     def onMessage(self, Connection, Data):
         try:
-            Response = json.loads(Data["Data"])
+            Response = json.loads(Data)
             DumpJSONResponseToLog(Response)
-        
+            
+            if ('Data' in Response):
+                Response = Response["Data"]
+            
             if ('SWITCH_ON' in Response):
                 if (Response["SWITCH_ON"] == 'yes'):
                     self.cameraState = 1
@@ -154,8 +157,8 @@ class BasePlugin:
                     self.ledState = 0
                 UpdateDevice(2, self.ledState, '', 0)
                 
-            if ('LED' in Response):
-                if (Response["LED"] == 'yes'):
+            if ('IR' in Response):
+                if (Response["IR"] == 'yes'):
                     self.irState = 1
                 else:
                     self.irState = 0
